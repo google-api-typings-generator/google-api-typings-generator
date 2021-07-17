@@ -7,8 +7,8 @@
   },
   "license": "MIT",
   "author": {
-    "email": "maxim@mazurok.com",
     "name": "Maxim Mazurok",
+    "email": "maxim@mazurok.com",
     "url": "https://maxim.mazurok.com"
   },
   "scripts": {
@@ -28,22 +28,23 @@
     "start": "ts-node src/cli.ts --out ./types",
     "pretest": "npm run compile",
     "test": "mocha",
-    "posttest": "npm run check"
+    "posttest": "npm run check",
+    "start-dt": "npx rimraf ~/DefinitelyTyped/types/gapi.client.* && ts-node src/dt/cli.ts --out ~/DefinitelyTyped/types"
   },
   "dependencies": {
     "@expo/spawn-async": "^1.5.0",
-    "@octokit/rest": "^18.5.2",
+    "@octokit/rest": "^18.5.6",
     "@types/dot": "^1.1.4",
     "@types/gapi.client.discovery": "^1.0.7",
-    "@types/lodash": "^4.14.168",
+    "@types/lodash": "^4.14.171",
     "@types/mocha": "^8.2.2",
-    "@types/n-readlines": "^1.0.1",
-    "@types/node": "^14.14.41",
+    "@types/n-readlines": "^1.0.2",
+    "@types/node": "^15.12.4",
     "@types/request": "2.48.5",
     "commander": "^7.2.0",
     "deep-sort-object": "^1.0.2",
     "dot": "^1.1.3",
-    "dtslint": "^4.0.9",
+    "dtslint": "^4.1.1",
     "eslint-plugin-deprecation": "^1.2.0",
     "get-proxy-settings": "^0.1.13",
     "got": "^11.8.2",
@@ -54,11 +55,11 @@
     "n-readlines": "^1.0.1",
     "npm-run-all": "^4.1.5",
     "strip-json-comments": "^3.1.1",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2.4"
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.4"
   },
   "engines": {
-    "node": "14.16.1",
-    "npm": "6.14.12"
+    "node": "14.17.0",
+    "npm": "7.14.0"
   }
 }
